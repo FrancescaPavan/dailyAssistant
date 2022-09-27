@@ -1,0 +1,70 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - saludar
+  - despedir
+  - que_daily
+  - lider
+  - daily_room
+  - mas_info
+  - registrar
+  - programar
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_bienvenido:
+    - text: "Hola! Bienvenido a la Daily Meeting Room. Cualquier cosa que necesites estoy para ayudarte."
+
+  utter_daily:
+    - text: "Una Daily Meeting es una reunion diaria de aprox. 15 minutos en la que el lider del proyecto coordina una conversacion sobre los avances del equipo."
+
+  utter_lider:
+    - text:
+        "El lider es un miembro del equipo que coordina la ronda en la que cada miembro del equipo responde:
+        - Que hice ayer?
+        - Que problemas encontre?
+        - Que voy a hacer hoy?"
+
+  utter_room:
+    - text: "Una vez iniciada la reunion, el lider se encarga de controlarla daily, tiene permisos para mutear, otorgar la palabra y expulsar a otros miembros del equipo."
+
+  utter_informacion:
+    - text: "Para obtener mas informacion sobre la Daily Meeting Room escanea el QR que hay afuera de esta habitacion!"
+
+  utter_registro:
+    - text: "[FUTURA FUNCIONALIDAD] El lider puede agregar el registro de lo que paso en la reunion."
+
+  utter_programar:
+    - text: "[FUTURA FUNCIONALIDAD] El lider de un equipo puede programar una reunion."
+
+  utter_despedida:
+    - text: "Nos vemos pronto!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

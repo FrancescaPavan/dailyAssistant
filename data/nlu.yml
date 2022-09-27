@@ -1,0 +1,168 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: saludar
+    examples: |
+      - hola
+      - buenas
+      - holis
+      - buen dia
+      - buenas tardes
+      - que tal?
+      - como va?
+      - buenas noches
+
+  - intent: despedir
+    examples: |
+      - chau
+      - nv
+      - nos vemos
+      - hasta luego
+      - hasta la proxima
+      - adios
+      - me voy
+
+  - intent: que_daily
+    examples: |
+      - que es una meeting?
+      - que es una daily meeting?
+      - daily meeting?
+      - daily
+      - meeting
+      - reunion
+
+  - intent: lider
+    examples: |
+      - que hace el lider?
+      - funcion del lider?
+      - lider
+      - proposito del lider?
+      - cual es la funcion del lider?
+      - cual es el trabajo del lider?
+
+  - intent: daily_room
+    examples: |
+      - como funciona la habitacion?
+      - que es la daily room
+      - que hace la sala de reuniones?
+      - daily room
+      - habitacion
+      - sala de reuniones
+
+  - intent: mas_info
+    examples: |
+      - mas informacion
+      - ayuda
+      - info
+      - help
+      - quiero saber mas
+      - necesito mas informacion
+      - necesito ayuda
+
+  - intent: registrar
+    examples: |
+      - quiero registrar lo que paso en la daily
+      - guardar informacion de la reunion
+      - agregar registro
+      - registrar daily
+      - registrar
+      - documentar encuentro
+      - documentar reunion
+
+  - intent: programar
+    examples: |
+      - programar daily
+      - schedule
+      - preparar reunion
+      - agregar al calendario
+      - programar encuentro
