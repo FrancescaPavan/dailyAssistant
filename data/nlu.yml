@@ -1,6 +1,10 @@
 version: "2.0"
 
 nlu:
+  - regex: task
+    examples: |
+      - task\d+
+
   - intent: greet
     examples: |
       - hey
@@ -149,20 +153,97 @@ nlu:
       - necesito mas informacion
       - necesito ayuda
 
-  - intent: registrar
+  - intent: terminar_tarea
     examples: |
-      - quiero registrar lo que paso en la daily
-      - guardar informacion de la reunion
-      - agregar registro
-      - registrar daily
-      - registrar
-      - documentar encuentro
-      - documentar reunion
+      - termine mi tarea
+      - ya finalice la tarea
+      - termine lo que tenia asignado
+      - tarea terminada
+      - finalice lo que tenia que hacer
+      - lo que tenia asignado esta listo
+      - mi tarea esta lista
+      - ya termine [Simon](agilebot)
+      - lo mio ya esta hecho
+      - termine lo que tenia para hacer
 
-  - intent: programar
+  - intent: informar_tarea
     examples: |
-      - programar daily
-      - schedule
-      - preparar reunion
-      - agregar al calendario
-      - programar encuentro
+      - [task32](task)
+      - [task659](task)
+      - Es la [task1244](task)
+      - El ID de la tarea es [task27](task)
+      - Es [task09](task)
+      - [task5](task)
+      - Es la tarea [task32678](task)
+
+  - intent: empezar_tarea
+    examples: |
+      - quiero empezar una tarea nueva
+      - me podes asignar una tarea
+      - nueva tarea
+      - me das una tarea
+      - podes darme una tarea
+      - no tengo tarea
+      - estoy sin tarea
+
+  - intent: forzar_asignacion
+    examples: |
+      - asignale la tarea [task435](task) a [ValenMoli](agilebot)
+      - agregale la tarea [task021](task) a [Roman](agilebot)
+      - ponele [task89](task) a [felipe](agilebot) Simon
+      - agrega a [FranPavan](agilebot) en la tarea [task1](task)
+      - pone a [InakiA](agilebot) en la [task65](task)
+      - asignale a [labo](agilebot) la tarea [12](task)
+      - uni a [Simon](agilebot) a la tarea [task07](task)
+
+  - intent: presentar
+    examples: |
+      - Soy [ValenMoli](agilebot)
+      - [Simon](agilebot)
+      - Estas hablando con [FranPavan](agilebot)
+      - Soy [labo](agilebot)
+      - Mi nombre es [felipe](agilebot)
+      - Yo soy [Roman](agilebot)
+      - [InakiA](agilebot)
+      - Soy [tomas](agilebot)
+      - Mi nombre es [Javi](agilebot)
+      - [ValenMoli](agilebot)
+      - Soy [Simon](agilebot)
+      - Estas hablando con [felipe](agilebot)
+      - Yo soy [FranPavan](agilebot)
+      - Mi nombre es [labo](agilebot)
+
+  - lookup: agilebot
+    examples: |
+      - franraineri
+      - franRaineri
+      - gianluca
+      - felipe
+      - FelipeAndres
+      - juliWagner
+      - juli W
+      - felixregert
+      - juan dure
+      - juan ditella
+      - emiescudero
+      - matiasbertelot
+      - tomas
+      - tomasfernandez
+      - Ale lagar   
+      - matias guerrero
+      - marias_bertelot, juan, Ale Lagar
+      - jose lopez, martin
+      - Marcelo Campo, Analia, Nelson
+      - Analia_amandi
+      - juan_perez
+      - juan_ditella
+      - ValenMoli
+      - FranPavan
+      - InakiA
+      - Roman
+      - Javi
+      - labo
+
+  - regex: agilebot
+    examples: |
+      - ((([aA-zZ]\w+ *){1,})+(, )* *([aA-zZ]\w+ *)){1,}

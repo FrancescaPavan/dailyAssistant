@@ -14,8 +14,36 @@ intents:
   - lider
   - daily_room
   - mas_info
-  - registrar
-  - programar
+  - terminar_tarea
+  - informar_tarea
+  - empezar_tarea
+  - forzar_asignacion
+  - presentar
+
+entities:
+  - task
+  - agilebot
+
+slots:
+  task:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: task
+
+  agilebot:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: agilebot
+        not_intent: forzar_asignacion
+
+  otherAgilebot:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: agilebot
+        intent: forzar_asignacion
 
 responses:
   utter_greet:
@@ -38,7 +66,10 @@ responses:
     - text: "I am a bot, powered by Rasa."
 
   utter_bienvenido:
-    - text: "Hola! Bienvenido a la Daily Meeting Room. Cualquier cosa que necesites estoy para ayudarte."
+    - text: "Hola! Bienvenido a la Daily Meeting Room. Yo soy la daily assistant, estoy para ayudar en las reuniones y para ayudarte a getionar tus tareas. Cualquier cosa que necesites aca voy a estar!"
+
+  utter_identificar:
+    - text: "Por favor confirmame tu nombre asi te puedo ayudar a gestionar sus tareas."
 
   utter_daily:
     - text: "Una Daily Meeting es una reunion diaria de aprox. 15 minutos en la que el lider del proyecto coordina una conversacion sobre los avances del equipo."
@@ -56,14 +87,25 @@ responses:
   utter_informacion:
     - text: "Para obtener mas informacion sobre la Daily Meeting Room escanea el QR que hay afuera de esta habitacion!"
 
-  utter_registro:
-    - text: "[FUTURA FUNCIONALIDAD] El lider puede agregar el registro de lo que paso en la reunion."
-
-  utter_programar:
-    - text: "[FUTURA FUNCIONALIDAD] El lider de un equipo puede programar una reunion."
-
   utter_despedida:
     - text: "Nos vemos pronto!"
+
+  utter_pedirtarea:
+    - text: "Entiendo, me podrias decir de que tarea estamos hablando?"
+
+  utter_finalizar:
+    - text: "Tarea {task} finalizada con exito!"
+
+  utter_forzado:
+    - text: "Entiendo, voy a agregar a {agilebot} en la tarea {task}"
+
+  utter_presentar:
+    - text: "Gracias {agilebot}! Ahora si, en que te puedo ayudar?"
+
+actions:
+  - action_terminar_tarea
+  - action_asignar_tarea
+  - action_asignar_tarea_forzada
 
 session_config:
   session_expiration_time: 60

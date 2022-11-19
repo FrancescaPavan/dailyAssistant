@@ -1,0 +1,42 @@
+{
+  "task1": {
+    "description": "create a web page for the project",
+    "assigned_to": ["assignee1", "assignee2", "felipe", "ValenMoli"],
+    "status": "inProgress",
+    "created_on": "the creation timestamp goes here",
+    "assigned_on": [
+      "assignee1 assignation timestamp",
+      "assignee2 assignation timestamp",
+      "11/19/2022, 18:11:21",
+      "11/19/2022, 18:47:19"
+    ],
+    "finished_on": "",
+    "task_requirements": ["requirement1", "requirement2"]
+  },
+  "task2": {
+    "description": "task name goes here",
+    "assigned_to": ["assignee1", "assignee2", "Simon"],
+    "status": "inProgress",
+    "created_on": "the creation timestamp goes here",
+    "assigned_on": [
+      "assignee1 assignation timestamp",
+      "assignee2 assignation timestamp",
+      "11/19/2022, 18:47:58"
+    ],
+    "finished_on": "",
+    "task_requirements": ["requirement1", "requirement2"]
+  },
+  "task3": {
+    "description": "task name goes here",
+    "assigned_to": ["FranPavan", "assignee2", "ValenMoli"],
+    "status": "inProgress",
+    "created_on": "the creation timestamp goes here",
+    "assigned_on": [
+      "assignee1 assignation timestamp",
+      "assignee2 assignation timestamp",
+      "11/19/2022, 19:10:43"
+    ],
+    "finished_on": "11/19/2022, 17:52:34",
+    "task_requirements": ["requirement1", "requirement2"]
+  }
+}

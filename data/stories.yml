@@ -32,6 +32,7 @@ stories:
     steps:
       - intent: saludar
       - action: utter_bienvenido
+      - action: utter_identificar
 
   - story: que es una daily
     steps:
@@ -53,17 +54,29 @@ stories:
       - intent: mas_info
       - action: utter_informacion
 
-  - story: registrar la daily
-    steps:
-      - intent: registrar
-      - action: utter_registro
-
-  - story: programar una futura reunion
-    steps:
-      - intent: programar
-      - action: utter_programar
-
   - story: despedirse
     steps:
       - intent: despedir
       - action: utter_despedida
+
+  - story: terminar una tarea
+    steps:
+      - intent: terminar_tarea
+      - action: utter_pedirtarea
+      - intent: informar_tarea
+      - action: action_terminar_tarea
+
+  - story: pedir que se asigne una tarea
+    steps:
+      - intent: empezar_tarea
+      - action: action_asignar_tarea
+
+  - story: agregar miembro en tarea
+    steps:
+      - intent: forzar_asignacion
+      - action: action_asignar_tarea_forzada
+
+  - story: usuario da su nombre
+    steps:
+      - intent: presentar
+      - action: utter_presentar
