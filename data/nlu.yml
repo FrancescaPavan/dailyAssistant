@@ -196,6 +196,27 @@ nlu:
       - asignale a [labo](agilebot) la tarea [12](task)
       - uni a [Simon](agilebot) a la tarea [task07](task)
 
+  - intent: recomendar_tarea
+    examples: |
+      - Recomendame una tarea
+      - me podes recomendar una tarea?
+      - me recomendas una tarea para [Roman](agilebot)?
+      - Recomendame una tarea para [felipe](agilebot)
+      - sugerime una tarea nueva
+      - sugerime una tarea para [Javi](agilebot)
+      - que tarea puede hacer [ValenMoli](agilebot)?
+      - me decis que tarea podria hacer?
+      - me das una sugrencia de que tarea tomar?
+
+  - intent: recomendar_persona
+    examples: |
+      - Quien es el mejor para la [task5](task)?
+      - Recomendame a alguien para la tarea [task123](task)
+      - Decime el mas indicado para hacer [task07](task)
+      - quien puede hacer la tarea [task56](task)?
+      - la mejor persona para [task23](task)
+      - quienes pueden hacer la [task987](task)?
+
   - intent: presentar
     examples: |
       - Soy [ValenMoli](agilebot)

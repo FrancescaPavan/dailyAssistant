@@ -80,3 +80,13 @@ stories:
     steps:
       - intent: presentar
       - action: utter_presentar
+
+  - story: se pide una recomendacion de tarea
+    steps:
+      - intent: recomendar_tarea
+      - action: action_recomendar_tarea
+
+  - story: se pide personas recomendadas para una tarea
+    steps:
+      - intent: recomendar_persona
+      - action: action_recomendar_persona

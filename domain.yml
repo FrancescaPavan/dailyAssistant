@@ -19,6 +19,8 @@ intents:
   - empezar_tarea
   - forzar_asignacion
   - presentar
+  - recomendar_tarea
+  - recomendar_persona
 
 entities:
   - task
@@ -36,14 +38,18 @@ slots:
     mappings:
       - type: from_entity
         entity: agilebot
-        not_intent: forzar_asignacion
+        not_intent:
+          - forzar_asignacion
+          - recomendar_tarea
 
   otherAgilebot:
     type: text
     mappings:
       - type: from_entity
         entity: agilebot
-        intent: forzar_asignacion
+        intent:
+          - forzar_asignacion
+          - recomendar_tarea
 
 responses:
   utter_greet:
@@ -106,6 +112,8 @@ actions:
   - action_terminar_tarea
   - action_asignar_tarea
   - action_asignar_tarea_forzada
+  - action_recomendar_tarea
+  - action_recomendar_persona
 
 session_config:
   session_expiration_time: 60
